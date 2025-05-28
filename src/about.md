@@ -2,7 +2,7 @@
 layout: layout.njk
 title: About
 ---
-<img src="/images/EspéciesPlanetário0.jpg" alt="A photo of me" class="max-w-md pb-16" />
+<img src="/images/especiesplanetario0.jpg" alt="A photo of me" class="max-w-md pb-16" />
 
 
  works as a hybrid with art, architecture and education, and one of their favorite things is to work in collaboration with children.
