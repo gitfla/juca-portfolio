@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title }}</title>
+  <title></title>
   <link href="/dist/styles.css" rel="stylesheet">
 </head>
 <body class="h-screen m-0 font-sans text-gray-800 bg-white">
@@ -15,28 +15,49 @@
       <a href="/work/" class="self-start hover:italic text-lg">Work</a>
        <nav class="sidebar-tabs flex-1 overflow-y-auto">
               <ul>
-                {% for section in workProjects %}
+                
                   <li class="section-tab mb-4">
-                    <span class="block font-bold cursor-default text-gray-700 mb-2">{{ section.name | title }}</span>
+                    <span class="block font-bold cursor-default text-gray-700 mb-2">Paintings</span>
                     <ul class="project-tabs pl-4">
-                      {% for project in section.projects %}
+                      
                         <li>
-                          <a href="/work/{{ section.name }}/{{ project.name }}/index.html"
+                          <a href="/work/paintings/popcorn/index.html"
                              class="block py-1 hover:underline
-                               {% if page.url == '/work/' + section.name + '/' + project.name + '/index.html' %}font-bold text-blue-600{% else %}text-gray-600{% endif %}">
-                            {{ project.name | replace("-", " ") | title }}
+                               text-gray-600">
+                            Popcorn
                           </a>
                         </li>
-                      {% endfor %}
+                      
                     </ul>
                   </li>
-                {% endfor %}
+                
+                  <li class="section-tab mb-4">
+                    <span class="block font-bold cursor-default text-gray-700 mb-2">Workshops</span>
+                    <ul class="project-tabs pl-4">
+                      
+                        <li>
+                          <a href="/work/workshops/invisible/index.html"
+                             class="block py-1 hover:underline
+                               text-gray-600">
+                            Invisible
+                          </a>
+                        </li>
+                      
+                    </ul>
+                  </li>
+                
               </ul>
             </nav>
     </aside>
 
     <main class="flex-1 overflow-y-auto p-6">
-      {{ content | safe }}
+      
+<article>
+  <h1>popcorn</h1>
+  <p><strong>Section:</strong> paintings</p>
+
+  
+</article>
     </main>
 
   </div>

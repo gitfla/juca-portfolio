@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections.flatProjects
+  size: 1
+  alias: project
+permalink: "/work/{{ project.section }}/{{ project.name }}/index.html"
+layout: layout.njk
+---
+
+<article>
+  <h1>{{ project.name }}</h1>
+  <p><strong>Section:</strong> {{ project.section }}</p>
+
+  {% if project.description %}
+    <section>
+      <h2>Description</h2>
+      <pre>
+        {% include "../work/" + project.section + "/" + project.name + "/" + project.description %}
+      </pre>
+    </section>
+  {% endif %}
+</article>
