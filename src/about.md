@@ -5,7 +5,7 @@ title: About
 <img src="/images/especiesplanetario0.jpg" alt="A photo of me" class="max-w-md pb-16" />
 
 
- works as a hybrid with art, architecture and education, and one of their favorite things is to work in collaboration with children.
+Juca works as a hybrid with art, architecture and education, and one of their favorite things is to work in collaboration with children.
 
 
 They have participated in education residencies including at DocumentaFifteen, in Kassel, ART OMI, in Hudson, NY, Demonstra in Lisbon, Portugal, Pivô in São Paulo and Terra Afefé in Ibicoara, Brasil, Fahrender Raum, Munich and the Tamayo Museum, in Mexico City.
