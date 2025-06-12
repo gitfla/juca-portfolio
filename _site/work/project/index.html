@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title }}</title>
+  <title></title>
   <link href="/dist/styles.css" rel="stylesheet">
 </head>
 <body class="h-screen m-0 font-sans text-gray-800 bg-white">
@@ -17,23 +17,21 @@
       <div class="relative group">
           <span class="text-lg font-semibold">Work</span>
           <div class="ml-2">
-            {% for section in collections.workSections %}
-              <div class="mt-2 font-semibold">{{ section.name }}</div>
-              <ul class="ml-4">
-                {% for project in section.projects %}
-                  <li>
-                    <a href="{{ project.permalink }}" class="hover:underline">{{ project.name }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endfor %}
+            
           </div>
         </div>
 
     </aside>
 
     <main class="flex-1 overflow-y-auto p-6">
-      {{ content | safe }}
+      
+<h1 class="text-xl font-bold mb-4"></h1>
+
+
+
+
+
+
     </main>
 
   </div>

@@ -1,0 +1,23 @@
+---
+layout: layout.njk  # your main layout that contains the sidebar + content wrapper
+pagination:
+  data: collections.projects  # or however you collect your projects
+  size: 1
+  alias: projectEntry
+permalink: "/work/{{ projectEntry.section }}/{{ projectEntry.project }}/index.html"
+---
+
+<article class="project-content">
+  <h1>{{ projectEntry.project }}</h1>
+
+  {% if projectEntry.description %}
+    <section class="project-description">
+      <h2>Description</h2>
+      <pre class="whitespace-pre-wrap bg-gray-100 p-4 rounded">
+        {% include "../../../work/" + projectEntry.section + "/" + projectEntry.project + "/" + projectEntry.description %}
+      </pre>
+    </section>
+  {% endif %}
+
+  <!-- Add more sections as needed, e.g., images, texts, etc. -->
+</article>

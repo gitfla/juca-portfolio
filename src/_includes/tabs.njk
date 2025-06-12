@@ -1,0 +1,41 @@
+<div class="p-4 space-y-6">
+  {% for section in collections.work %}
+    <details class="border-b pb-2">
+      <summary class="cursor-pointer font-bold text-xl">{{ section.name }}</summary>
+      <div class="pl-4 mt-2 space-y-4">
+        {% for project in section.projects %}
+          <details>
+            <summary class="cursor-pointer text-lg text-blue-700 underline">{{ project.name }}</summary>
+            <div class="mt-2 space-y-2">
+
+              {% if project.description %}
+                <div>
+                  <h4 class="font-semibold">Description</h4>
+                  <pre class="bg-gray-100 p-2 whitespace-pre-wrap">
+                    {{ project.description }}
+                  </pre>
+                </div>
+              {% endif %}
+
+              {% for i in range(1, 11) %}
+                {% set img = "Image-" + i + ".jpg" %}
+                {% set txt = "Text-" + i + ".txt" %}
+                {% if project.images and img in project.images %}
+                  <div class="space-y-1">
+                    <img src="/work/{{ section.name }}/{{ project.name }}/{{ img }}" class="max-w-full rounded shadow" alt="{{ img }}">
+                    {% if project.texts and txt in project.texts %}
+                      <pre class="bg-gray-100 p-2 whitespace-pre-wrap">
+{% include "../../../work/" + section.name + "/" + project.name + "/" + txt %}
+                      </pre>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    </details>
+  {% endfor %}
+</div>
